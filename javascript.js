@@ -31,10 +31,11 @@ function setNextQuestion(){
     showQuestion()
 }
     
-function showQuestion(){
+//function showQuestion(){
+
   //change the text of the question div from "Question" to whatever Question we have 
   // questionElement.textContent = 
-  console.log(questions[0])
+  //console.log(questions[0])
   // cahnge the text of our answer buttons with our answers.
 
 
@@ -53,7 +54,7 @@ function showQuestion(){
   // choicesButtonsElement.appendChild(button)  
   // })
 
-}
+
 
   
 function resetState() {
