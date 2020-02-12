@@ -5,6 +5,7 @@ var questionElement = document.getElementById('question')
 var choicesElement = document.getElementById('choices-buttons')
 
 // var countDownTimer;
+
 //Set the end date for the timer.
 //Make the timer function update every second.
 //Calculate the remaining time in days, hours, minutes, and seconds.
@@ -14,7 +15,7 @@ var choicesElement = document.getElementById('choices-buttons')
 
 console.log(startButton.classList);
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame, countdown)
 
 function startGame() {
     console.log('Started')
@@ -24,11 +25,16 @@ function startGame() {
     //the questionContainerElement will now show.
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
+    var seconds = 30, $seconds = document.querySelector('#countdown');
+(function countdown() {
+    $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
+    if(seconds --> 0) setTimeout(countdown, 1000)
+})();
 }
 
 function setNextQuestion(){
     resetState()
-    showQuestion()
+  // showQuestion()
 }
     
 //function showQuestion(){
