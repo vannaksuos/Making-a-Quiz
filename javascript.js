@@ -3,33 +3,35 @@ var nextButton = document.getElementById('next-btn')
 var questionContainerElement = document.getElementById('question-container')
 var questionElement = document.getElementById('question')
 var choicesElement = document.getElementById('choices-buttons')
-
-// var countDownTimer;
-
-//Set the end date for the timer.
-//Make the timer function update every second.
-//Calculate the remaining time in days, hours, minutes, and seconds.
-//Display the output to users.
-//Display a message when the timer is over.
-//Implementation.
+let shuffledQuestions, currentQuestionIndex
 
 console.log(startButton.classList);
-
-startButton.addEventListener('click', startGame, countdown)
+startButton.addEventListener('click', startGame, countdown,)
 
 function startGame() {
     console.log('Started')
     //add the hide class and it hides the start button
     startButton.classList.add('hide')
     //removing the hide class from the questionContainerElement
+   
+	  currentQuestionIndex = 0;
     //the questionContainerElement will now show.
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
+   
     var seconds = 30, $seconds = document.querySelector('#countdown');
 (function countdown() {
     $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
-    if(seconds --> 0) setTimeout(countdown, 1000)
+    if(seconds --> 0) setTimeout(countdown, 1000);
+    if(seconds < 0) {
+      alert("Time is up");
+    }
 })();
+//we need the buttons on the answer to work
+// when answer it will be correct or incorrect
+// we need to store the answer 
+//we need it to go to the next question with new muliple answers answers
+
 }
 
 function setNextQuestion(){
@@ -65,7 +67,7 @@ function setNextQuestion(){
   
 function resetState() {
   //hides the nextButton
-  nextButton.classList.add('hide')
+//  nextButton.classList.add('hide')
 }
 
 // function setStatusClass(element, correct) {
