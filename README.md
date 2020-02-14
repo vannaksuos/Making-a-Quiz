@@ -1,6 +1,6 @@
 # Making-a-Quiz
 Heres the links https://vannaksuos.github.io/Making-a-Quiz/
-https://github.com/vannaksuos/Making-a-Quizg
+https://github.com/vannaksuos/Making-a-Quiz
 This is a 60 second quiz of multiple choices.
 Theres a timer that counts down and if you answer the question wrong it would have taken some time off the clock. (Im still working on this)
 I needed a screen shot of the Quiz
