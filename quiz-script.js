@@ -34,9 +34,6 @@ function loadNextQuestion (){
     var answer = selectOption.value;
     if(question[currentQuestion].answer == answer){
         score +=25;
-    if(question[currentQuestion].answer === answer) {
-        seconds -= -5;
-    }
     }
     selectOption.checked = false;
     currentQuestion++;
@@ -55,13 +52,25 @@ function loadNextQuestion (){
 }
 loadQuestion(currentQuestion);
 
-var seconds = 60, $seconds = document.querySelector('#countdown');
-    (function countdown() {
-    $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
-    if(seconds --> 0) setTimeout(countdown, 1000);
-    if(seconds < 0) {
-      alert("Time is up");
+
+
+(function() {
+    var sec = 60;
+    function startTimer(){
+        
+        var timer = setInterval(function(){
+            sec--;
+            document.getElementById('timerDisplay').innerHTML='00:'+sec;
+        
+            if (sec < 0) {
+                clearInterval(timer);
+                alert("Time is up!")
+            }
+        }, 1000);
     }
+        document.getElementById('question').addEventListener('click', function() {
+        sec -= 5;
+        document.getElementById('timerDisplay').innerHTML='00:'+sec;
+    });
+    startTimer();
 })();
-
-

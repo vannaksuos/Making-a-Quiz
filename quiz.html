@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="quiz.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Quiz</title>
 </head>
 <body>
     
@@ -15,11 +15,12 @@
         <label class="option"><input type="radio" name="option" value="2" /><span id="opt2"></span></label>
         <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
         <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
-        <div id="countdown"style="font-size:xx-large"></div>
+        <div id="timerDisplay"style="font-size:xx-large"></div>
         <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question</button>
     </div>
-
- 
+    <div id="timerDisplay"></div>
+  
+    
 
     <div id="result" class="Container result" style="display:none">
     </div>
