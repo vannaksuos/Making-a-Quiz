@@ -16,7 +16,6 @@ var resultCont = document.getElementById("result");
 
 
 alert("You have 60 seconds to take this multiple choice quiz, if you answered incorrectly you will lose 5 seconds off your timer. Press ok when you are ready")
-
 function loadQuestion (questionIndex){
     var q = question[questionIndex];
     questionEl.textContent = (questionIndex + 1) + "- " + q.question;
@@ -48,8 +47,9 @@ function loadNextQuestion (){
         return;
     }
     loadQuestion(currentQuestion);
-}
 
+    
+}
 loadQuestion(currentQuestion);
 var seconds = 60, $seconds = document.querySelector('#countdown');
 (function countdown() {
