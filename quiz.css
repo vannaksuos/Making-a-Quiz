@@ -1,6 +1,6 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: gray;
+    background: blue;
 }
 
 .container {
@@ -24,14 +24,14 @@ body {
     color: 1px solid rgb(187, 24, 24); 
 }
 
-.quesiton{
+.question{
     padding-top: 20px;
     border-radius:20px;
-    font-size: 25px;
+    font-size: large;
     text-transform: uppercase;
     color: white;
     margin: 10px 0 10px;
-    background-color: blue;
+   
 }
 
 .option{
@@ -52,13 +52,14 @@ body {
 .next-btn{
     border: none;
     outline: none;
-    background: rgba(255, 25, 255, .05);
     width: 100px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     float: right;
-    margin: 10px;
+    padding-bottom:10px;
+    font-size: large;
+    font-weight: bold;
 }
 
 .next-btn:hover{
@@ -77,9 +78,20 @@ body {
 
 }
 
-.start-btn {
-    font-size: 1.5rem;
+#start-btn {
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    padding-bottom:10px;
+    font-size: large;
     font-weight: bold;
-    padding: 10px 20px;
+}
 
+#start-btn:hover{
+    background: #08038C;
+    color: #f6f6f6;
 }
