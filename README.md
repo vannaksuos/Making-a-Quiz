@@ -7,6 +7,6 @@ Theres a timer that counts down and if you answer the question wrong it would ha
 I needed a screen shot of the Quiz
 You get 10 points for answering the questions correct
 ![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture1.PNG)
-![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture2.PNG.)
+![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture2.PNG)
 ![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture3.PNG)
 ![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture5.PNG)
