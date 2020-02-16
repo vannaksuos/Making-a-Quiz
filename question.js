@@ -1,10 +1,10 @@
 var question = [{
     "question":"Commonly used data types DO NOT include:",
-    "option1":"strings",
+    "option1":"alerts",
     "option2":"booleans",
-    "option3":"alerts",
+    "option3":"strings",
     "option4":"numbers",
-    "answer":"3",
+    "answer":"1",
 },{
     "question":"The condition in an if / else statement is enclosed within ____.",
     "option1":"quotes",
@@ -22,10 +22,10 @@ var question = [{
 }, {
     "question":"String values must be enclosed within ____ when being assigned to variables.",
     "option1":"commas",
-    "option2":"curly brackets",
-    "option3":"quotes",
+    "option2":"quotes",
+    "option3":"curly brackets",
     "option4":"parentheses",
-    "answer":"3"
+    "answer":"2"
 }]
 
 
