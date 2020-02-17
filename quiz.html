@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="quiz.css" rel="stylesheet">
+   
     <title>Quiz</title>
 </head>
 <body>
-    
-    <div id="quizContainer" class="container">
+    <div class="controls">    
+        <button id="start-btn" class="start-btn btn">Start</button>
+    </div>
+    <div id="quizContainer" class="container hidden">
         <div class="title">Quiz</div>
         <div id="question" class="question"></div>
         <label class="option"><input type="radio" name="option" value="1" /><span id="opt1"></span></label>
         <label class="option"><input type="radio" name="option" value="2" /><span id="opt2"></span></label>
         <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
         <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
-        <button id="start-btn" class="start-btn btn">Start</button>
+        
         <div id="countdown"style="font-size:xx-large"></div>
         <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question</button>
     </div>
     
   
-      
+   
        
 
     <div id="result" class="Container result" style="display:none">
     </div>
+    
     <script src="question.js"></script>
     <script src="quiz-script.js"></script>
     
