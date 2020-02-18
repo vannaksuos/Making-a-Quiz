@@ -26,7 +26,15 @@ var question = [{
     "option3":"curly brackets",
     "option4":"parentheses",
     "answer":"2"
-}]
+}, {
+    "question":"How long is the part time class for Coding boot camp?",
+    "option1":"3 months",
+    "option2":"1 year",
+    "option3":"2 years",
+    "option4":"6 months",
+    "answer":"4"
+}
+]
 
 
 

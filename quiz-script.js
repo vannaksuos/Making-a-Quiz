@@ -8,7 +8,7 @@ var opt1 = document.getElementById("opt1");
 var opt2 = document.getElementById("opt2");
 var opt3 = document.getElementById("opt3");
 var opt4 = document.getElementById("opt4");
-
+var seconds = 60
 var nextButton = document.getElementById("nextButton");
 var resultCont = document.getElementById("result");
 
@@ -18,6 +18,7 @@ startButton.addEventListener('click', startGame, countdown,)
 
 
 alert("Heres is a 60 seconds multiple choice quiz. If you answer incorrectly you will lose 5 seconds off your time, PRESS START when you are ready" )
+
 function startGame() {
     console.log('Started')
     
@@ -34,7 +35,7 @@ function startGame() {
     if(seconds --> 0) setTimeout(countdown, 1000);
     if(seconds < 0) {
       alert("Time is up");
-    }
+   }
 })();
 }
 
@@ -61,6 +62,11 @@ function loadNextQuestion (){
     if(question[currentQuestion].answer == answer){
         score +=25;
     }
+    // var answer = selectOption.value;
+    // if(question[currentQuestion].answer === false){
+    //     seconds - 5;
+    //    alert("incorrect")
+    // }
     selectOption.checked = false;
     currentQuestion++;
     if(currentQuestion == totQuestions - 1){
@@ -73,11 +79,9 @@ function loadNextQuestion (){
         return;
     }
     loadQuestion(currentQuestion);
-
-    
 }
-loadQuestion(currentQuestion);
+    loadQuestion(currentQuestion);
 
 // THEN I can save my initials and score
 // need penalities for wrong answers
-// need to work on timer where it dont start right away, but when you hit the start button
+
