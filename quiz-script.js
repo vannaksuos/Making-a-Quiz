@@ -29,7 +29,7 @@ function startGame() {
     container.classList.remove('hidden')
     // setNextQuestion()
    
-    var seconds = 60, $seconds = document.querySelector('#countdown');
+    $seconds = document.querySelector('#countdown');
     (function countdown() {
     $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
     if(seconds --> 0) setTimeout(countdown, 1000);
@@ -59,14 +59,14 @@ function loadNextQuestion (){
         return;
     }
     var answer = selectOption.value;
-    if(question[currentQuestion].answer == answer){
-        score +=25;
+    if (question[currentQuestion].answer == answer) {
+        score += 25;
     }
-    // var answer = selectOption.value;
-    // if(question[currentQuestion].answer === false){
-    //     seconds - 5;
-    //    alert("incorrect")
-    // }
+    else {
+        seconds -=4;
+    }
+
+  
     selectOption.checked = false;
     currentQuestion++;
     if(currentQuestion == totQuestions - 1){
@@ -84,4 +84,3 @@ function loadNextQuestion (){
 
 // THEN I can save my initials and score
 // need penalities for wrong answers
-
