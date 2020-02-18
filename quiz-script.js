@@ -64,6 +64,7 @@ function loadNextQuestion (){
     }
     else {
         seconds -=4;
+        alert("Incorrect!")
     }
 
   

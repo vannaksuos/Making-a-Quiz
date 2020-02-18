@@ -33,6 +33,20 @@ var question = [{
     "option3":"2 years",
     "option4":"6 months",
     "answer":"4"
+}, {
+    "question":"what is an array?",
+    "option1":"an Arrow you shoot ",
+    "option2":"is a single variable that is used to store different elements",
+    "option3":"defines a standard for accessing documents",
+    "option4":"the sound a dolphin makes to communicate",
+    "answer":"2"
+}, {
+    "question":"what is an event listener?",
+    "option1":"is a procedure or function in a computer program that waits for an event to occur.",
+    "option2":"is a single variable that is used to store different elements",
+    "option3":"method adds new items to the end of an array, and returns the new length. ",
+    "option4":"defines a standard for accessing documents",
+    "answer":"1"
 }
 ]
 
