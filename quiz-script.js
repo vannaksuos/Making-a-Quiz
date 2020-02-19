@@ -17,7 +17,7 @@ console.log(startButton.classList);
 startButton.addEventListener('click', startGame, countdown,)
 
 
-alert("Heres is a 40 seconds multiple choice quiz. If you answer incorrectly you will lose 5 seconds off your time, PRESS START when you are ready" )
+alert("Heres is a 40 seconds multiple choice quiz. If you answer incorrectly you will lose 5 seconds off your time, for every Correct answers you will earn 25 points. PRESS START when you are ready" )
 
 function startGame() {
     console.log('Started')
