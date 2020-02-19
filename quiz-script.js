@@ -35,7 +35,7 @@ function startGame() {
     if(seconds < 0) {
         container.style.display = "none";
         resultCont.style.display = "";
-        resultCont.textContent = "Your Score:" + score;
+        resultCont.textContent = "Game Over! Your Score: " + score;
         return;
    }
 })();
@@ -78,7 +78,7 @@ function loadNextQuestion (){
     if(currentQuestion == totQuestions){
         container.style.display = "none";
         resultCont.style.display = "";
-        resultCont.textContent = "Your Score:" + score;
+        resultCont.textContent = "Game Over! Your Score: " + score;
         return;
     }
 
