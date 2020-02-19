@@ -27,7 +27,7 @@ function startGame() {
 	currentQuestionIndex = 0;
     
     container.classList.remove('hidden')
-    // setNextQuestion()
+   
     $seconds = document.querySelector('#countdown');
     (function countdown() {
     $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
@@ -63,13 +63,13 @@ function loadNextQuestion (){
     var answer = selectOption.value;
     if (question[currentQuestion].answer == answer) {
         score += 25;
+        alert("Correct!")
     }
     else {
         seconds -=4;
-        alert("Incorrect!")
+        alert("WRONG!")
     }
 
-  
     selectOption.checked = false;
     currentQuestion++;
     if(currentQuestion == totQuestions - 1){
@@ -82,7 +82,8 @@ function loadNextQuestion (){
         return;
     }
 
-   
     loadQuestion(currentQuestion);
 }
     loadQuestion(currentQuestion);
+
+    // need high scores storages from local storage and an input for initials at the end of quiz
