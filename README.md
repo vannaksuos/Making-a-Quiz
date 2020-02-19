@@ -13,3 +13,4 @@ Im currently still trying to figure how to save high score and players initials 
 ![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture2.PNG)
 ![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture3.PNG)
 ![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture5.PNG)
+![](https://github.com/vannaksuos/Making-a-Quiz/blob/master/screenshots/Capture6.PNG)
