@@ -1,7 +1,6 @@
-// currentQuestion is the first question in my question index
+// currentQuestion is the first question in my question index which will load at beginning and a reference to where to start on my function
 var currentQuestion = 0;
-
-// totQuestions = question.length is the length of my question
+// totQuestions is how many question I have
 var totQuestions = question.length;
 // startButton is and button element 
 var startButton = document.getElementById("start-btn")
@@ -16,20 +15,21 @@ var opt3 = document.getElementById("opt3");
 var opt4 = document.getElementById("opt4");
 // var seconds is my seconds in my countdown
 var seconds = 60
-// var nextButton is my next button element
+// var nextButton is my next button element that will get me to my next question and answers
 var nextButton = document.getElementById("nextButton");
 //resultCont is my result element
 var resultCont = document.getElementById("result");
 
 
-console.log(startButton.classList);
+
 startButton.addEventListener('click', startGame, countdown,)
 
 
-alert("Heres is a 60 seconds multiple choice quiz. If you answer incorrectly you will lose 5 seconds off your time. Your time left will be your score. PRESS START when you are ready" )
+var initials = prompt("Heres is a 60 seconds multiple choice quiz. If you answer incorrectly you will lose 5 seconds off your time. Your time left will be your score, PLEASE INPUT YOUR INITIALS or Your NAME. PRESS START when you are ready")
+
 
 function startGame() {
-    console.log('Started')
+    
     
     startButton.classList.add('hidden')
    
@@ -44,7 +44,7 @@ function startGame() {
     if(seconds < 0) {
         container.style.display = "none";
         resultCont.style.display = "";
-        resultCont.textContent = "Game Over! Your Score: " + seconds;
+        resultCont.textContent = "Game Over!";
         return;
    }
 })();
@@ -68,10 +68,11 @@ function loadNextQuestion (){
     }
     var answer = selectOption.value;
     if (question[currentQuestion].answer == answer) {
-        
+       alert("CORRECT!")
     }
     else {
         seconds -=4;
+        alert("WRONG!")
         
     }
 
@@ -83,7 +84,7 @@ function loadNextQuestion (){
     if(currentQuestion == totQuestions){
         container.style.display = "none";
         resultCont.style.display = "";
-        resultCont.textContent = "Game Over! Your Score: " + seconds;
+        resultCont.textContent = "Game Over! " + initials + " Your Score is " + seconds + " points"; 
         return;
     }
 
@@ -92,4 +93,4 @@ function loadNextQuestion (){
 }
     loadQuestion(currentQuestion);
 
-    // need high scores storages from local storage and an input for initials at the end of quiz
+    
