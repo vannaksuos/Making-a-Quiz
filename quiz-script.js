@@ -1,15 +1,24 @@
+// currentQuestion is the first question in my question index
 var currentQuestion = 0;
-var score = 0;
+
+// totQuestions = question.length is the length of my question
 var totQuestions = question.length;
+// startButton is and button element 
 var startButton = document.getElementById("start-btn")
+// container is my container for my quiz for question and answers, everything in the container
 var container = document.getElementById("quizContainer");
+//questionEl is my question from my question.js
 var questionEl = document.getElementById("question");
+// opt 1 thru 4 is my opt elements from my html page
 var opt1 = document.getElementById("opt1");
 var opt2 = document.getElementById("opt2");
 var opt3 = document.getElementById("opt3");
 var opt4 = document.getElementById("opt4");
-var seconds = 40
+// var seconds is my seconds in my countdown
+var seconds = 60
+// var nextButton is my next button element
 var nextButton = document.getElementById("nextButton");
+//resultCont is my result element
 var resultCont = document.getElementById("result");
 
 
@@ -17,7 +26,7 @@ console.log(startButton.classList);
 startButton.addEventListener('click', startGame, countdown,)
 
 
-alert("Heres is a 40 seconds multiple choice quiz. If you answer incorrectly you will lose 5 seconds off your time, for every Correct answers you will earn 25 points. PRESS START when you are ready" )
+alert("Heres is a 60 seconds multiple choice quiz. If you answer incorrectly you will lose 5 seconds off your time. Your time left will be your score. PRESS START when you are ready" )
 
 function startGame() {
     console.log('Started')
@@ -35,15 +44,12 @@ function startGame() {
     if(seconds < 0) {
         container.style.display = "none";
         resultCont.style.display = "";
-        resultCont.textContent = "Game Over! Your Score: " + score;
+        resultCont.textContent = "Game Over! Your Score: " + seconds;
         return;
    }
 })();
 }
 
-function setNextQuestion(){
- 
-}
     
 function loadQuestion (questionIndex){
     var q = question[questionIndex];
@@ -57,17 +63,16 @@ function loadQuestion (questionIndex){
 function loadNextQuestion (){
     var selectOption = document.querySelector("input[type=radio]:checked");
     if(!selectOption){
-        alert("Please select an Answer!");
+        // alert("Please select an Answer!");
         return;
     }
     var answer = selectOption.value;
     if (question[currentQuestion].answer == answer) {
-        score += 25;
-        alert("Correct!")
+        
     }
     else {
         seconds -=4;
-        alert("WRONG!")
+        
     }
 
     selectOption.checked = false;
@@ -78,11 +83,12 @@ function loadNextQuestion (){
     if(currentQuestion == totQuestions){
         container.style.display = "none";
         resultCont.style.display = "";
-        resultCont.textContent = "Game Over! Your Score: " + score;
+        resultCont.textContent = "Game Over! Your Score: " + seconds;
         return;
     }
 
     loadQuestion(currentQuestion);
+    
 }
     loadQuestion(currentQuestion);
 
